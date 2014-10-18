@@ -1,16 +1,21 @@
-<% if user_signed_in? %>
-  <%= link_to destroy_user_session_path, class: "btn btn-success btn-lg", method: :delete do%>
-    <span class="glyphicon glyphicon-log-out"></span> Log out
+<div class="jumbotron center">
+  
+  <% if user_signed_in? %>
+      <h1>Welcome</h1>
+  <% else %>
+      
+    <p>
+      
+      <%= link_to new_user_session_path, class: "btn btn-success btn-lg" do %>
+      <span class="glyphicon glyphicon-log-in"></span>  Sign In
+      <% end %>
+
+      <%= link_to new_user_registration_path, class: "btn btn-success btn-lg" do %>
+      <span class="glyphicon glyphicon-new-window"></span>  Sign up
+      <% end %>
+
+    </p>
+    
   <% end %>
-<% else %>
-  <p>
-    <%= link_to new_user_session_path, class: "btn btn-success btn-lg" do %>
-    <span class="glyphicon glyphicon-log-in"></span>  Sign In
-    <% end %>
-  </p>
-  <p>
-    <%= link_to new_user_registration_path, class: "btn btn-success btn-lg" do %>
-    <span class="glyphicon glyphicon-new-window"></span>  Sign up
-    <% end %>
-  </p>
-<% end %>
+
+</div>
