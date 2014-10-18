@@ -1,15 +1,15 @@
 <% if user_signed_in? %>
-  <%= link_to destroy_user_session_path, method: :delete do%>
+  <%= link_to destroy_user_session_path, class: "btn btn-success btn-lg", method: :delete do%>
     <span class="glyphicon glyphicon-log-out"></span> Log out
   <% end %>
 <% else %>
   <p>
-    <%= link_to new_user_session_path, class: "btn btn-info btn-lg" do %>
+    <%= link_to new_user_session_path, class: "btn btn-success btn-lg" do %>
     <span class="glyphicon glyphicon-log-in"></span>  Sign In
     <% end %>
   </p>
   <p>
-    <%= link_to new_user_registration_path, class: "btn btn-primary btn-lg" do %>
+    <%= link_to new_user_registration_path, class: "btn btn-success btn-lg" do %>
     <span class="glyphicon glyphicon-new-window"></span>  Sign up
     <% end %>
   </p>
