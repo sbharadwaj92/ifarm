@@ -1,17 +1,15 @@
 ActiveAdmin.register User do
-#remove_filter :storage_total_stat
-form do |f|
-  f.inputs do
-    f.input :name
-    f.input :email
-    f.input :password
-    f.input :password_confirmation
-
+  #remove_filter :storage_total_stat
+  form do |f|
+    f.inputs do
+      f.input :name
+      f.input :email
+      f.input :password
+      f.input :password_confirmation
+    end
+    f.actions
   end
-  f.actions
-
-end
-
+  permit_params :name, :email, :password, :password_confirmation
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -24,6 +22,4 @@ end
   #   permitted << :other if resource.something?
   #   permitted
   # end
-permit_params :name, :email, :password, :password_confirmation
-
 end
