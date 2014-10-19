@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
+  resource :user, only: [:edit] do
+    collection do
+      patch 'update_password'
+    end
+  end
   root to: "pages#home"
   get "about" => "pages#about" # Creats about_path
   # The priority is based upon order of creation: first created -> highest priority.
