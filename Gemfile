@@ -16,6 +16,7 @@ gem 'masonry-rails', '~> 0.2.1'
 gem 'will_paginate','~> 3.0.7'
 gem 'will_paginate-bootstrap'
 gem 'cancan'
+gem 'activeadmin', github: 'activeadmin'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
