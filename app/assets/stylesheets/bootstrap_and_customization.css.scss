@@ -3,16 +3,17 @@
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
 $brand-primary:                 #5cb85c;
-$navbar-default-brand-color:    #000000;
+$navbar-default-brand-color:    black;
 $navbar-default-bg:             #A1D2AB;
+$jumbotron-bg:                  white;
 @import 'bootstrap';
 
 .center {
-     text-align: center;
+  text-align: center;
 }
 .navbar-brand {
-     font-weight: bold;
+  font-weight: bold;
 }
 .navbar-default .navbar-nav > li > a{
-  color: #000000
+  color: black;
 }
