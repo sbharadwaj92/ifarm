@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-remove_filter :storage_total_stat
+#remove_filter :storage_total_stat
 form do |f|
   f.inputs do
     f.input :name
