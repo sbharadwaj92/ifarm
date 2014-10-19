@@ -3,13 +3,13 @@ ActiveAdmin.register User do
 form do |f|
   f.inputs do
     f.input :name
-    f.input :date_of_birth
     f.input :email
     f.input :password
     f.input :password_confirmation
 
   end
   f.actions
+
 end
 
   # See permitted parameters documentation:
@@ -24,6 +24,6 @@ end
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
+permit_params :name, :email, :password, :password_confirmation
 
 end
