@@ -23,6 +23,19 @@ ActiveAdmin.register User do
   filter :name
   filter :email
   permit_params :name, :email, :password, :password_confirmation
+
+  controller do
+
+    def update
+      if params[:user][:password].blank?
+        params[:user].delete("password")
+        params[:user].delete("password_confirmation")
+      end
+      super
+    end
+
+  end
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
