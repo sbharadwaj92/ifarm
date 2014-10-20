@@ -97,7 +97,7 @@ Rails.application.configure do
   address: "email-smtp.us-east-1.amazonaws.com",
   port: 587,
   domain: ENV["GMAIL_DOMAIN"],
-  authentication: :login,
+  authentication: "plain",
   enable_starttls_auto: true,
   user_name: ENV["GMAIL_USERNAME"],
   password: ENV["GMAIL_PASSWORD"]
