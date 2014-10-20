@@ -2,10 +2,10 @@
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
+$body-bg:                       #ecf0f1;
 $brand-primary:                 #5cb85c;
 $navbar-default-brand-color:    black;
 $navbar-default-bg:             #A1D2AB;
-$jumbotron-bg:                  white;
 @import 'bootstrap';
 
 .center {
