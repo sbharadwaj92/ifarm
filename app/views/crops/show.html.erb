@@ -1,0 +1,12 @@
+<p>
+  <strong>Title:</strong>
+  <%= @crop.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @crop.text %>
+</p>
+ 
+<%= link_to 'Back', crops_path %>
+| <%= link_to 'Edit', edit_crop_path(@crop) %>
