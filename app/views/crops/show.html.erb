@@ -2,11 +2,11 @@
   <strong>Title:</strong>
   <%= @crop.title %>
 </p>
- 
+<%= link_to image_tag(@crop.image.url(:med)), @crop.image.url %>
 <p>
   <strong>Text:</strong>
   <%= @crop.text %>
 </p>
- 
+
 <%= link_to 'Back', crops_path %>
 | <%= link_to 'Edit', edit_crop_path(@crop) %>
