@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   get "about" => "pages#about" # Creats about_path
-  resources :crops
+  resources :crops do
+    resources :symptoms
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
