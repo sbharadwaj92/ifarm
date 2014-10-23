@@ -4,7 +4,7 @@ class CreateSymptoms < ActiveRecord::Migration
       t.string :title
       t.text :text
 
-      # this line adds an integer column called `article_id`.
+      # this line adds an integer column called `crop_id`.
       t.references :crop, index: true
 
       t.timestamps
