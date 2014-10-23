@@ -1,12 +1,21 @@
-<p>
-  <strong>Title:</strong>
-  <%= @crop.title %>
-</p>
-<%= link_to image_tag(@crop.image.url(:med)), @crop.image.url %>
-<p>
-  <strong>Text:</strong>
-  <%= @crop.text %>
-</p>
-
-<%= link_to 'Back', crops_path %>
-| <%= link_to 'Edit', edit_crop_path(@crop) %>
+<div class="container">
+  <div class="col-md-offset-4 col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body" style="text-align: center;">
+        <p>
+          <strong>Title:</strong>
+          <%= @crop.title %>
+        </p>
+          <%= link_to image_tag(@crop.image.url(:med)), @crop.image.url %>
+        <p>
+          <strong>Text:</strong>
+          <%= @crop.text %>
+        </p>
+      </div>
+      <div class="panel-footer">
+        <%= link_to 'Back', crops_path %>
+        | <%= link_to 'Edit', edit_crop_path(@crop) %>
+      </div>
+    </div>
+  </div>
+</div>
