@@ -1,8 +1,11 @@
 <div class="jumbotron center">
   <% if user_signed_in? %>
-      <h1>Welcome</h1>
+      <h2>Welcome</h2>
       <%= link_to crops_path, class: "btn btn-success" do %>
-        View Crops
+        Need help on Nutrition?
+      <% end %><br /><br />
+      <%= link_to root_path, class: "btn btn-success" do %>
+        Need help for growing new crop?
       <% end %>
   <% else %>
     <p>

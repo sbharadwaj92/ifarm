@@ -4,7 +4,7 @@ ActiveAdmin.register User do
     selectable_column
     id_column
     column :name
-    column :email
+    column :username
     column :sign_in_count
     column :created_at
     column :confirmed_at
@@ -14,15 +14,15 @@ ActiveAdmin.register User do
   form do |f|
     f.inputs do
       f.input :name
-      f.input :email
+      f.input :username
       f.input :password
       f.input :password_confirmation
     end
     f.actions
   end
   filter :name
-  filter :email
-  permit_params :name, :email, :password, :password_confirmation
+  filter :username
+  permit_params :name, :username, :password, :password_confirmation
 
   controller do
 

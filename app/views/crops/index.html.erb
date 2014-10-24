@@ -1,28 +1,19 @@
-<div class="container">
-  <div class="col-md-offset-4 col-md-4">
-    <div class="jumbotron center">
-      <h3>Listing Crops</h3>
-      <%= link_to 'New crop', new_crop_path %>
-      <table>
-        <tr>
-          <th>Title</th>
-          <th>Image</th>
-          <th>Text</th>
-          <th colspan="3"></th>
-        </tr>
-       
-      <% @crops.each do |crop| %>
-        <tr>
-          <td><%= crop.title %></td>
-          <td><%= link_to image_tag(crop.image.url(:med)), crop.image.url %></td>
-          <td><%= crop.text %></td>
-          <td><%= link_to 'Show', crop_path(crop) %></td>
-          <td><%= link_to 'Edit', edit_crop_path(crop) %></td>
-          <td><%= link_to 'Destroy', crop_path(crop),
-                          method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-      </table>
+<div id="crops" class="transitions-enabled">
+  <% @crops.each do |crop| %>
+    <div class="box panel panel-default">
+      
+      <%= link_to image_tag(crop.image.url(:med)), crop_path(crop) %>
+      <div class="panel-body">
+
+          <%= link_to 'Show', crop_path(crop) %>
+          <%= link_to 'Edit', edit_crop_path(crop) %>
+          <%= link_to 'Destroy', crop_path(crop),
+                          method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     </div>
-  </div>
+  <% end %>
+</div>
+
+<div class="center">
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 </div>
