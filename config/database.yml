@@ -7,7 +7,7 @@ default: &default
 
 development:
  <<: *default
- database: survey_development
+ database: ifarm_development
  host: localhost
  username: root
  password: password
@@ -15,7 +15,7 @@ development:
 
 test:
  <<: *default
- database: survey_test
+ database: ifarm_test
  host: localhost
  username: root
  password: password
@@ -23,7 +23,7 @@ test:
 
 production:
  <<: *default
- database: survey_production
+ database: ifarm_production
  host: localhost
  username: root
  password: password
