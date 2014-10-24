@@ -1,6 +1,9 @@
 <div class="jumbotron center">
   <% if user_signed_in? %>
       <h1>Welcome</h1>
+      <%= link_to crops_path, class: "btn btn-success" do %>
+        View Crops
+      <% end %>
   <% else %>
     <p>
       <%= link_to new_user_session_path, class: "btn btn-success btn-lg" do %>

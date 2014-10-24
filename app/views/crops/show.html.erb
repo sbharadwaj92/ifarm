@@ -1,49 +1,49 @@
 <div class="container">
   <div class="col-md-offset-4 col-md-4">
     <div class="panel panel-default">
-      <div class="panel-body" style="text-align: center;">
+      <div class="panel-body">
         <p>
-          <strong>Title:</strong>
+          <h3>Title:</h3>
           <%= @crop.title %>
         </p>
           <%= link_to image_tag(@crop.image.url(:med)), @crop.image.url %>
         <p>
-          <strong>Text:</strong>
+          <h4>Text:</h4>
           <%= @crop.text %>
         </p>
 
-        <h2>Symptoms</h2>
+        <h3>Symptoms</h3>
         <% @crop.symptoms.each do |symptom| %>
           <p>
-            <strong>Title:</strong>
+            <h5>Title:</h5>
             <%= symptom.title %>
           </p>
           </p>
             <%= link_to image_tag(symptom.image.url(:med)), symptom.image.url %>
           <p>
           <p>
-            <strong>Text:</strong>
+            <h6>Text:</h6>
             <%= symptom.text %>
           </p>
         <% end %>
         
-          <h2>Add a Symptom:</h2>
+          <h3>Add a Symptom:</h3>
           <%= form_for([@crop, @crop.symptoms.build]) do |f| %>
-            <p>
-              <%= f.label :Title %><br>
-              <%= f.text_field :title %>
-            </p>
-            <p>
-              <%= f.label :image %><br>
-              <%= f.file_field :image%>
-            </p>
-            <p>
-              <%= f.label :Text %><br>
-              <%= f.text_area :text %>
-            </p>
-            <p>
-              <%= f.submit %>
-            </p>
+            <div class="form-group">
+              <div><%= f.label :Title %><br>
+              <%= f.text_field :title, class: "form-control"%></div>
+            </div>
+            <div class="form-group">
+              <div><%= f.label :image %><br>
+              <%= f.file_field :image%></div>
+            </div>
+            <div class="form-group">
+              <div><%= f.label :Text %><br>
+              <%= f.text_area :text, class: "form-control" %></div>
+            </div>
+            <%= button_tag(type: 'submit', class: "btn btn-success") do %>
+              Submit
+            <% end %>
           <% end %>
 
       </div>
