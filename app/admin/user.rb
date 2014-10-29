@@ -5,6 +5,8 @@ ActiveAdmin.register User do
     id_column
     column :name
     column :username
+    column :vilalge
+    column :crops_grown
     column :sign_in_count
     column :created_at
     column :confirmed_at

@@ -8,8 +8,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :name
-    devise_parameter_sanitizer.for(:account_update) << :name
+    devise_parameter_sanitizer.for(:sign_up) << :name << :village << :crops_grown
+    devise_parameter_sanitizer.for(:account_update) << :name << :village << :crops_grown
  end
  
 end
