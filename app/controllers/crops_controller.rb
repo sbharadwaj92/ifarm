@@ -14,7 +14,7 @@ class CropsController < ApplicationController
   end
 
   def index
-    @crops = Crop.all.order("created_at ASC").paginate(:page => params[:page], :per_page => 2)
+    @crops = Crop.all.paginate(:page => params[:page], :per_page => 2)
   end
 
   def show
