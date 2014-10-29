@@ -11,21 +11,6 @@
           <h4>Text:</h4>
           <%= @crop.text %>
         </p>
-
-        <h3>Symptoms</h3>
-        <% @crop.symptoms.each do |symptom| %>
-          <p>
-            <h5>Title:</h5>
-            <%= symptom.title %>
-          </p>
-          </p>
-            <%= link_to image_tag(symptom.image.url(:med)), symptom.image.url %>
-          <p>
-          <p>
-            <h6>Text:</h6>
-            <%= symptom.text %>
-          </p>
-        <% end %>
         
           <h3>Add a Symptom:</h3>
           <%= form_for([@crop, @crop.symptoms.build]) do |f| %>
