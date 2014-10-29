@@ -1,51 +1,67 @@
 <div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4>Sign up here</h4>
+  <div class="col-md-offset-3 col-md-7">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Sign up here</h4>
+      </div>
+
+      <div class="panel-body">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= f.label :name %>
+            <%= f.text_field :name, autofocus: true, placeholder: "Enter your name", class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div><%= f.label :username %>
+            <%= f.text_field :username, placeholder: "Enter a username", class: "form-control" %></div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+              <%= f.label :village %>
+              <%= f.text_field :village, placeholder: "Enter your village name", class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+              <%= f.label "Crops Grown" %>
+              <%= f.text_field :crops_grown, placeholder: "Enter the crops that you grow", class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div><%= f.label :password %> <!--<% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>-->
+              <%= f.password_field :password, autocomplete: "off", placeholder: "Enter the password", class: "form-control" %></div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <div><%= f.label :password_confirmation %>
+              <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Re-enter the password", class: "form-control" %></div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <%= button_tag(type: 'submit', class: "btn btn-success") do %>
+            <span class="glyphicon glyphicon-new-window"></span>  Sign up
+          <% end %>
+        </div>
+
+        <% end %>
+      </div>
+      
+      <div class="panel-footer">
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
-    
-    <div class="panel-body">
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
-
-      <div class="form-group">
-        <%= f.label :name %>
-        <%= f.text_field :name, autofocus: true, placeholder: "Enter your name", class: "form-control" %>
-      </div>
-
-      <div class="form-group">
-        <div><%= f.label :username %>
-        <%= f.text_field :username, placeholder: "Enter a username", class: "form-control" %></div>
-      </div>
-
-      <div class="form-group">
-          <%= f.label :village %>
-          <%= f.text_field :village, placeholder: "Enter your village name", class: "form-control" %>
-      </div>
-
-      <div class="form-group">
-          <%= f.label "Crops Grown" %>
-          <%= f.text_field :crops_grown, placeholder: "Enter the crops that you grow", class: "form-control" %>
-      </div>
-
-      <div class="form-group">
-        <div><%= f.label :password %> <!--<% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>-->
-          <%= f.password_field :password, autocomplete: "off", placeholder: "Enter the password", class: "form-control" %></div>
-      </div>
-
-      <div class="form-group">
-        <div><%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Re-enter the password", class: "form-control" %></div>
-      </div>
-
-      <%= button_tag(type: 'submit', class: "btn btn-success") do %>
-        <span class="glyphicon glyphicon-new-window"></span>  Sign up
-      <% end %>
-
-      <% end %>
-    </div>
-    <div class="panel-footer">
-      <%= render "devise/shared/links" %>
-    </div>
-  </div>
 </div>
