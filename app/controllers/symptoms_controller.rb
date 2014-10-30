@@ -1,5 +1,4 @@
 class SymptomsController < InheritedResources::Base
-  
   def new
     @crop = Crop.find(params[:crop_id])
     @symptom = @crop.symptoms.build

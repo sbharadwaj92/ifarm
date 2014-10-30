@@ -1,6 +1,5 @@
-class Crop < ActiveRecord::Base
-  has_many :symptoms, dependent: :destroy
-  has_many :developments, dependent: :destroy
+class Development < ActiveRecord::Base
+  belongs_to :crop
   validates :title, presence: true,
                     length: { minimum: 5 }
   has_attached_file :image, styles: { small: "64x64", med: "100x100", large: "200x200" }

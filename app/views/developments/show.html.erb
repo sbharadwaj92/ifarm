@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="col-md-offset-4 col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>
+          <h3>Title:</h3>
+          <%= @development.title %>
+        </p>
+          <%= link_to image_tag(@development.image.url(:med)), @development.image.url %>
+        <p>
+          <h4>Text:</h4>
+          <%= @development.text %>
+        </p>
+
+      </div>
+      <div class="panel-footer">
+        <%= link_to 'Back', crop_developments_path %>
+        | <%= link_to 'Edit', edit_crop_development_path(@crop,@development) %>
+      </div>
+    </div>
+  </div>
+</div>

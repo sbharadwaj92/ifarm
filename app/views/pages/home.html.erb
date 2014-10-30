@@ -1,12 +1,24 @@
 <div class="jumbotron center">
+  <h2>Welcome</h2>
+  <%= link_to crops_path, class: "btn btn-success" do %>
+    Need help on Nutrition?
+  <% end %><br /><br />
+  <%= link_to crops_path, class: "btn btn-success" do %>
+    Need help for growing new crop?
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+<% if false %>
   <% if user_signed_in? %>
-      <h2>Welcome</h2>
-      <%= link_to crops_path, class: "btn btn-success" do %>
-        Need help on Nutrition?
-      <% end %><br /><br />
-      <%= link_to root_path, class: "btn btn-success" do %>
-        Need help for growing new crop?
-      <% end %>
   <% else %>
     <p>
       <%= link_to new_user_session_path, class: "btn btn-success btn-lg" do %>
@@ -18,4 +30,4 @@
       <% end %>
     </p>
   <% end %>
-</div>
+<% end %>
