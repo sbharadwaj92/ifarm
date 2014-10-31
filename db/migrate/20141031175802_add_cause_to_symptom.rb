@@ -1,5 +1,5 @@
 class AddCauseToSymptom < ActiveRecord::Migration
   def change
-    add_column :symptoms, :remedy, :text
+    add_column :symptoms, :cause, :text
   end
 end
