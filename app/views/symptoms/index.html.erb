@@ -1,18 +1,24 @@
+<h3 id ="h3h" class="center" style="color: #005126;"> Pest/Disease Identification </h3>
 <div id="symptoms" class="transitions-enabled">
   <% @crop.symptoms.each do |symptom| %>
-    <div class="box panel panel-default">
-      <h4 class="center">
+    <div class="boxs panel panel-default">
+      <h5 class="center title">
         <%= symptom.title %>
-      </h4>
-      <%= link_to image_tag(symptom.image.url(:med)), crop_symptom_path(@crop,symptom) %>
-      <div class="panel-body">
-
-          <%= link_to 'Show', crop_symptom_path(@crop,symptom) %>
-          <%= link_to 'Edit', edit_crop_symptom_path(@crop,symptom) %>
-          <%= link_to "Destroy", [symptom.crop,symptom],
-                          method: :delete, data: { confirm: 'Are you sure?' } %>
-
-      </div>
+      </h5>
+      <%= link_to image_tag(symptom.image.url(:large)), crop_symptom_path(@crop,symptom) %>
     </div>
   <% end %>
 </div>
+
+
+
+<% if false %>
+  <div class="panel-body">
+
+    <%= link_to 'Show', crop_symptom_path(@crop,symptom) %>
+    <%= link_to 'Edit', edit_crop_symptom_path(@crop,symptom) %>
+    <%= link_to "Destroy", [symptom.crop,symptom],
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+
+  </div>
+<% end %>

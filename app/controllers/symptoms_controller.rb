@@ -21,6 +21,15 @@ class SymptomsController < InheritedResources::Base
     @symptom = Symptom.find(params[:id])
   end
 
+  def update
+    @crop = Crop.find(params[:crop_id])
+    @symptom = @crop.symptoms.find(params[:id])
+
+    if @crop.update_attributes(params[:crop])
+      redirect_to(@crop)
+    end
+  end
+
   def create
     @crop = Crop.find(params[:crop_id])
     @symptom = @crop.symptoms.create(symptom_params)
@@ -37,6 +46,6 @@ class SymptomsController < InheritedResources::Base
 
   private
     def symptom_params
-      params.require(:symptom).permit(:title, :text, :image)
+      params.require(:symptom).permit(:title, :text, :image, :cause, :remedy)
     end
 end

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="col-md-offset-4 col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>
+          <h3>Title:</h3>
+          <%= @language.title %>
+        </p>
+          <%= link_to image_tag(@language.image.url(:med)), @language.image.url %>
+      </div>
+      <div class="panel-footer">
+        <%= link_to 'Back', languages_path %>
+        | <%= link_to 'Edit', edit_language_path(@language) %>
+      </div>
+    </div>
+  </div>
+</div>

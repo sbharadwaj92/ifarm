@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :languages
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  root to: "pages#home"
+  root "languages#index" # Makes language index page as root path
+  get "home" => "pages#home" # Creats home_path
   get "about" => "pages#about" # Creats about_path
   resources :crops do
     resources :symptoms

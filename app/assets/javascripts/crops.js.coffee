@@ -4,5 +4,5 @@
 $ ->
   $('#crops').imagesLoaded ->
     $('#crops').masonry
-      itemSelector: '.box'
+      itemSelector: '.boxc'
       isFitWidth: true

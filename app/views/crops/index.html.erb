@@ -1,0 +1,30 @@
+<h3 id ="h3h" class="center" style="color: #005126;"> Crop Selection </h3>
+<div id="crops" class="transitions-enabled">
+  <% @crops.each do |crop| %>
+    <div class="boxc panel panel-default">
+      <h5 class="center title">
+        <b><%= crop.title %></b>
+      </h5>
+      <%= link_to image_tag(crop.image.url(:large)), crop_symptoms_path(crop) %>
+    </div>
+  <% end %>
+</div>
+
+<div class="center">
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>
+
+
+
+
+
+
+<% if false %>
+  <div class="panel-body">
+
+      <%= link_to 'Show', crop_path(crop) %>
+      <%= link_to 'Edit', edit_crop_path(crop) %>
+      <%= link_to 'Destroy', crop_path(crop),
+                      method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>

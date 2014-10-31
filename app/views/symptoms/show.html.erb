@@ -1,15 +1,21 @@
 <div class="container">
-  <div class="col-md-offset-4 col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <p>
-          <h3>Title:</h3>
-          <%= @symptom.title %>
+    <div class="panel sh panel-default">
+      <div class="panel-body ps">
+          <h3 style="text-align: center;">Disease:&nbsp; <%= @symptom.title %></h3>
+        <p style="text-align: center;">
+          <%= link_to image_tag(@symptom.image.url(:large)), @symptom.image.url %>
         </p>
-          <%= link_to image_tag(@symptom.image.url(:med)), @symptom.image.url %>
         <p>
-          <h4>Text:</h4>
-          <%= @symptom.text %>
+          <h4><b>Symptom</b></h4>
+          <div class="well wells well-sm">
+            <%= @symptom.text %>
+          </div>
+        </p>
+        <p>
+          <h4><b>Remedy</b></h4>
+          <div class="well wells well-sm">
+            <%= @symptom.remedy %>
+          </div>
         </p>
 
       </div>
@@ -18,5 +24,4 @@
         | <%= link_to 'Edit', edit_crop_symptom_path(@crop,@symptom) %>
       </div>
     </div>
-  </div>
 </div>

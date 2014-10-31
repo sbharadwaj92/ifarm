@@ -2,18 +2,59 @@
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
-$body-bg:                       #ecf0f1;
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+$font-family-sans-serif:        'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-bg:                       #8e9f69;
 $brand-primary:                 #5cb85c;
-$navbar-default-brand-color:    black;
-$navbar-default-bg:             #A1D2AB;
+$navbar-default-brand-color:    white;
+$navbar-default-bg:             #005126;
 @import 'bootstrap';
 
 .center {
   text-align: center;
 }
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.navbar {
+  margin-bottom: 0px;
+}
 .navbar-brand {
   font-weight: bold;
 }
 .navbar-default .navbar-nav > li > a{
-  color: black;
+  color: white;
 }
+.panel-default {
+color: #333333;
+background-color: #009148;   //#009156
+border-color: #dddddd;
+}
+.btn-block + .btn-block {
+margin-top: 0px;
+}
+.btn-lg1 {
+  padding: 23px;
+  height: 150px;
+}
+.btn-lg2 {
+  padding: 0px;
+  height: 150px;
+}
+.navbar-brand {
+  font-size: 25px;
+}
+.home-body1 {
+  background-image: url(image-path('nutrition_final.jpg'));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.home-body2 {
+  background-image: url(image-path('grow_final.jpg'));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+//#00261c;

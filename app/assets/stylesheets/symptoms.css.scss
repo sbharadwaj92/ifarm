@@ -5,11 +5,23 @@
   margin: 0 auto;
 }
 
-.box {
-  margin: 5px;
-  width: 214px;
+.boxs {
+  margin: 15px;
+  width: 150px;
+  height: 150px;
 }
 
-.box img {
-  width: 100%;
+.boxs img {
+  width: 150px;
+  height: 150px;
+}
+.sh {
+  background-color: white;
+  margin-top: 15px;
+}
+.wells {
+  color: white;
+  background-color: #8cc873;
+  border-radius: 10px;
+  text-align: justify;
 }
