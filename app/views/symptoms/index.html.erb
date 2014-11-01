@@ -1,3 +1,6 @@
+<% if user_signed_in? %>
+  <center><%= link_to "New Disease", new_crop_symptom_path, class: "btn btn-success" %></center>
+<% end %>
 <h3 id ="h3h" class="center" style="color: white;"> Pest/Disease Identification </h3>
 <div id="symptoms" class="transitions-enabled">
   <% @crop.symptoms.each do |symptom| %>
