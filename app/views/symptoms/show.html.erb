@@ -21,7 +21,11 @@
       </div>
       <div class="panel-footer">
         <%= link_to 'Back', crop_symptoms_path %>
-        | <%= link_to 'Edit', edit_crop_symptom_path(@crop,@symptom) %>
       </div>
     </div>
 </div>
+
+
+<% if false %>
+  <%= link_to 'Edit', edit_crop_symptom_path(@crop,@symptom) %>
+<% end %>
