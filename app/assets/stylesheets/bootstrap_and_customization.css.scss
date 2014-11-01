@@ -30,7 +30,7 @@ $navbar-default-bg:             #005126;
 .panel-default {
 color: #333333;
 background-color: #009148;   //#009156
-border-color: #dddddd;
+border-color: transparent;
 }
 .btn-block + .btn-block {
 margin-top: 0px;
@@ -63,4 +63,5 @@ body {
 
   background-image: url(image-path('soil.png'));
 }
+
 //#00261c;
