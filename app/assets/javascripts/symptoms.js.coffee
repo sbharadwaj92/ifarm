@@ -6,3 +6,4 @@ $ ->
     $('#symptoms').masonry
       itemSelector: '.boxs'
       isFitWidth: true
+      isFitHeight: true

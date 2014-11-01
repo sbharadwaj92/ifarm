@@ -6,3 +6,4 @@ $ ->
     $('#crops').masonry
       itemSelector: '.boxc'
       isFitWidth: true
+      isFitHeight: true

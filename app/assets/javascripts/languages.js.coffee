@@ -6,3 +6,4 @@ $ ->
     $('#languages').masonry
       itemSelector: '.boxl'
       isFitWidth: true
+      isFitHeight: true
