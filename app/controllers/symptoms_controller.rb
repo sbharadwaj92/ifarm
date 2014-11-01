@@ -7,8 +7,7 @@ class SymptomsController < InheritedResources::Base
 
   def index
     @crop = Crop.find(params[:crop_id])
-    @symptom = Symptom.find_by_id(params[:all])
-    @symptoms = Symptom.all
+    @symptoms = @crop.symptoms.all.order("created_at ASC").paginate(:page => params[:page], :per_page => 6)
   end
 
   def show

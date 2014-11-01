@@ -9,19 +9,25 @@
         <%= symptom.title %>
       </h5>
       <%= link_to image_tag(symptom.image.url(:large)), crop_symptom_path(@crop,symptom) %>
+      <% if user_signed_in? %>
+        <div class="panel-footer">
+          <%= link_to 'Show', crop_symptom_path(@crop,symptom) %>
+          | <%= link_to 'Edit', edit_crop_symptom_path(@crop,symptom) %>
+          | <%= link_to "Delete", [symptom.crop,symptom],
+                          method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
 
 
-
 <% if false %>
-  <div class="panel-body">
+<% if user_signed_in? %>
+  <br>
+<% end %>
 
-    <%= link_to 'Show', crop_symptom_path(@crop,symptom) %>
-    <%= link_to 'Edit', edit_crop_symptom_path(@crop,symptom) %>
-    <%= link_to "Destroy", [symptom.crop,symptom],
-                    method: :delete, data: { confirm: 'Are you sure?' } %>
-
-  </div>
+<div class="center">
+  <%= will_paginate @symptoms, renderer: BootstrapPagination::Rails %>
+</div>
 <% end %>
