@@ -20,7 +20,9 @@
 
       </div>
       <div class="panel-footer">
-        <%= link_to 'Back', crop_symptoms_path %>
+        <%= link_to 'Back', crop_symptoms_path %> |
+        <%= link_to "Destroy", [@symptom.crop,@symptom],
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     </div>
 </div>

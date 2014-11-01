@@ -21,27 +21,29 @@ class SymptomsController < InheritedResources::Base
     @symptom = Symptom.find(params[:id])
   end
 
+
   def update
     @crop = Crop.find(params[:crop_id])
     @symptom = @crop.symptoms.find(params[:id])
 
-    if @crop.update_attributes(params[:crop])
-      redirect_to(@crop)
+    if @symptom.update(symptom_params)
+      redirect_to crop_symptom_path(@crop,@symptom)
+    else
+      render 'edit'
     end
   end
 
   def create
     @crop = Crop.find(params[:crop_id])
     @symptom = @crop.symptoms.create(symptom_params)
-    redirect_to crop_path(@crop)
+    redirect_to crop_symptom_path(@crop,@symptom)
   end
 
   def destroy
-    @symptom = Symptom.find(params[:id])
-    @symptom = @crop.symptom.find(params[:id])
+    @crop = Crop.find(params[:crop_id])
+    @symptom = @crop.symptoms.find(params[:id])
     @symptom.destroy
-    redirect_to symptoms_path
-
+    redirect_to crop_symptoms_path
   end
 
   private
