@@ -1,14 +1,12 @@
-//= depend_on_asset "bootstrap/glyphicons-halflings-regular.eot"
-//= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
-//= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
-//= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 $font-family-sans-serif:        'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-//$body-bg:                       #8e9f69;
+//$body-bg:                      #8e9f69;
 $brand-primary:                 #5cb85c;
 $navbar-default-brand-color:    white;
 $navbar-default-bg:             #005126;
+
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
 
 .center {
