@@ -22,9 +22,6 @@ $navbar-default-bg:             #005126;
 .navbar-brand {
   font-weight: bold;
 }
-.navbar-default .navbar-nav > li > a{
-  color: white;
-}
 .panel-default {
 color: #333333;
 background-color: #009148;   //#009156
@@ -55,11 +52,20 @@ margin-top: 0px;
   background-position: center;
 }
 .navbar {
-  background-color:rgba(75,58,52,0.75);
+  background-color: rgba(75,58,52,0.75);
 }
 body {
   background-image: url(image-path('soil.png'));
 }
 .navbar-default .navbar-nav > li > a {
   color: #009148;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #009148;
+}
+.navbar-default .navbar-brand:hover {
+  color: #009148;
+}
+.navbar-default {
+  border-color: rgba(75,58,52,0.75);
 }
