@@ -205,7 +205,7 @@ DEPENDENCIES
   aws-sdk
   bootstrap-sass
   coffee-rails (~> 4.0.0)
-  devise (~> 3.4.0)
+  devise
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
