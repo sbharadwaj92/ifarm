@@ -7,8 +7,10 @@
 $font-family-sans-serif:        'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 //$body-bg:                       #8e9f69;
 $brand-primary:                 #5cb85c;
-$navbar-default-brand-color:    white;
+$navbar-default-brand-color:    #009148;
 $navbar-default-bg:             #005126;
+
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
 
 .center {
@@ -60,8 +62,8 @@ margin-top: 0px;
   background-color:rgba(75,58,52,0.75);
 }
 body {
-
   background-image: url(image-path('soil.png'));
 }
-
-//#00261c;
+.navbar-default .navbar-nav > li > a {
+  color: #009148;
+}
