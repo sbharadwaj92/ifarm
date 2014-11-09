@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: aa23647f29d5596663755822b7bfee09a3b989b6
+  revision: 1e61b4e2bc7a886be73970ff30a1c756e1b7bee1
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -160,7 +160,7 @@ GEM
       polyamorous (~> 1.1)
     rdoc (4.1.2)
       json (~> 1.4)
-    responders (1.1.1)
+    responders (1.1.2)
       railties (>= 3.2, < 4.2)
     sass (3.2.19)
     sass-rails (4.0.4)
