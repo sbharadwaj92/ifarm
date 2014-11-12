@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: 9132da65ac40841857d8e59b06b38c63b8c2e158
+  revision: a436d693799e19dab0cf01be99687e10088e5421
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -114,9 +114,9 @@ GEM
       rails
     mime-types (2.4.3)
     mini_portile (0.6.1)
-    minitest (5.4.2)
+    minitest (5.4.3)
     multi_json (1.10.1)
-    mysql2 (0.3.16)
+    mysql2 (0.3.17)
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
