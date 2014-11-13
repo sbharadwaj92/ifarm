@@ -26,6 +26,7 @@ end
 
 group :development do
   gem 'spring'
+  gem 'better_errors'
 end
 
 group :production do
