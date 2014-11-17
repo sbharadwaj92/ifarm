@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: 327c62d9f8f5ad39f7cf9363f2195b44076e3baa
+  revision: 51057e01b412de5ff889a8f4485820d21b899a9e
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -85,7 +85,7 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.2)
-    formtastic (3.0.0)
+    formtastic (3.1.0)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.1.1)
     has_scope (0.6.0.rc)
